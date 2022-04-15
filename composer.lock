@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c333d90ff2063a26c3e5b0a4c68761e",
+    "content-hash": "cdc933f4db76b0137dc2ed42e3935fec",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -54,6 +54,41 @@
                 }
             ],
             "time": "2021-12-01T12:42:55+00:00"
+        },
+        {
+            "name": "diverently/laravel-mix-kirby",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Diverently/laravel-mix-kirby.git",
+                "reference": "91fe17d6634083cab9417c4e9477021554851aa7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Diverently/laravel-mix-kirby/zipball/91fe17d6634083cab9417c4e9477021554851aa7",
+                "reference": "91fe17d6634083cab9417c4e9477021554851aa7",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Cordes",
+                    "email": "robert@diverently.com"
+                }
+            ],
+            "description": "Laravel Mix helper for the Kirby CMS",
+            "support": {
+                "issues": "https://github.com/Diverently/laravel-mix-kirby/issues",
+                "source": "https://github.com/Diverently/laravel-mix-kirby/tree/1.4.1"
+            },
+            "time": "2021-04-09T12:38:46+00:00"
         },
         {
             "name": "filp/whoops",
@@ -821,5 +856,5 @@
         "php": ">=7.4.0 <8.2.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

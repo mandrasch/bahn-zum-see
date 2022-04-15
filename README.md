@@ -1,4 +1,23 @@
+# Bahn zum See
 
+(Just a quick learning prototype for kirby, used kirby plain kit)
+
+-   `ddev start && ddev composer install`
+-   `ddev launch`
+-   `ddev exec npm run dev`, open [bahn-zum-see.ddev.site:3000](https://bahn-zum-see.ddev.site:3000/) via https(!)
+
+## What was done?
+
+-   `ddev composer require diverently/laravel-mix-kirby` (https://github.com/Diverently/laravel-mix-kirby)
+-   `npm init -y`
+-   laravel mix (node): `ddev exec npm install laravel-mix --save-dev`
+-   `ddev exec npm install bootstrap @popperjs/core --save-dev`
+-   add scripts to package.json, change 'development' to 'dev' => https://laravel-mix.com/docs/6.0/upgrade#after (alternative: https://github.com/Diverently/laravel-mix-kirby#npm-scripts)
+-   formatting: `ddev exec npm install --save-dev prettier @prettier/plugin-php` (https://github.com/prettier/plugin-php)
+
+-   Run via `ddev exec npm run dev`
+
+<hr>
 # DDEV Kirby Plainkit
 
 [Kirby CMS](https://getkirby.com/) meets [DDEV](https://ddev.com/) & [Gitpod](https://gitpod.io/).
@@ -34,7 +53,7 @@ composer create-project getkirby/plainkit install-folder && \
     mv install-folder/README.md install-folder/README_kirby.md && \
     cp -Rp install-folder/. /var/www/html && \
     rm -rf install-folder/
-exit 
+exit
 ddev composer install
 ddev launch
 ```
@@ -45,7 +64,7 @@ Gitpod DDEV integration was done with helpful tips by [@shaal](https://github.co
 
 ## Links
 
-- See https://github.com/mandrasch/ddev-kirby-starterkit as well
+-   See https://github.com/mandrasch/ddev-kirby-starterkit as well
 
 ## License
 

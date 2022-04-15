@@ -5,6 +5,11 @@
 /kirby
 /vendor
 
+# NodeJS
+/node_modules
+# build
+/dist
+
 # System files
 # ------------
 
@@ -55,3 +60,4 @@ Icon
 # ---------------
 
 /site/config/.license
+
