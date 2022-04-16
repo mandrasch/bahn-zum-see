@@ -11,6 +11,14 @@ ddev exec npm run dev
 
 Open: https://bahn-zum-see.ddev.site:3000/ (via https!)
 
+Plugins used:
+
+-   https://github.com/Diverently/laravel-mix-kirby
+
+Deployment via:
+
+-
+
 ## What was done?
 
 -   `ddev composer require diverently/laravel-mix-kirby` (https://github.com/Diverently/laravel-mix-kirby)
