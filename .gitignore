@@ -8,7 +8,10 @@
 # NodeJS
 /node_modules
 # build
-/dist
+/assets/mix-manifest.json
+/assets/main.js
+/assets/main.css
+
 
 # System files
 # ------------
@@ -31,7 +34,7 @@ Icon
 # (sensitive workspace files)
 # ---------------------------
 *.sublime-workspace
-/.vscode
+# /.vscode
 /.idea
 
 # -------------SECURITY-------------

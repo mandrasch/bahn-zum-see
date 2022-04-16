@@ -1,10 +1,15 @@
 # Bahn zum See
 
-(Just a quick learning prototype for kirby, used kirby plain kit)
+Just a quick learning prototype for kirby using [plain kit](https://github.com/mandrasch/ddev-kirby-plainkit) and [Kirby 3: How to build a website from scratch](https://www.youtube.com/watch?v=QwjX8JAwBws&t=61s). Inspired by [bahn-zum-berg.at](https://www.bahn-zum-berg.at/).
 
--   `ddev start && ddev composer install`
--   `ddev launch`
--   `ddev exec npm run dev`, open [bahn-zum-see.ddev.site:3000](https://bahn-zum-see.ddev.site:3000/) via https(!)
+```
+ddev start
+ddev composer install
+ddev exec npm install
+ddev exec npm run dev
+```
+
+Open: https://bahn-zum-see.ddev.site:3000/ (via https!)
 
 ## What was done?
 
