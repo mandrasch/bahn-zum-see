@@ -1,0 +1,36 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+    # Sustainability: Don't trigger build for updated README
+    paths-ignore:
+      - "**/README.md"
+  jobs:
+    build-and-deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout 🛎️
+                uses: actions/checkout@v2
+        - name: Use Node LTS
+          uses: actions/setup-node@v2
+          with:
+            node-version: "16" # lts
+        - name: Install and Build 🔧
+          run: |
+            npm install
+            npm run build
+        # ssh setup (via key),rsync, composer install
+        # based on https://zellwk.com/blog/github-actions-deploy/
+        - name: Install SSH key
+          uses: shimataro/ssh-key-action@v2
+          with:
+            key: ${{ secrets.SSH_KEY }}
+            name: id_rsa # optional
+            known_hosts: ${{ secrets.KNOWN_HOSTS }}
+            config: ${{ secrets.CONFIG }} # ssh_config; optional
+            if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+        - name: rsync over ssh
+          run: rsync -avz ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/web/bahn-zum-see.mandrasch.eu/
+        - name: run composer install via ssh
+          run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /web/bahn-zum-see.mandrasch.eu/ && composer validate && composer install"
