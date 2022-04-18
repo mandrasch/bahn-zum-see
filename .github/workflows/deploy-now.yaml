@@ -40,9 +40,8 @@ jobs:
           CI: true
           SITE_URL: ${{ steps.project.outputs.site-url }}
           production: true
-        # was: npm ci
         run: |
-          npm install
+          npm ci
           npm run build
 
       - name: Setup composer
