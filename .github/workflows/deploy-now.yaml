@@ -47,7 +47,8 @@ jobs:
         with:
           php_version: '8.0'
           version: '2'
-          args: --optimize-autoloader --no-dev
+          # missing extension caused error
+          args: --optimize-autoloader --no-dev --ignore-platform-req=ext-gd
 
       - name: Deploy to IONOS
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
