@@ -502,8 +502,8 @@
     "yargs-parser": "^21.0.1"
   },
   "scripts": {
-    "dev": "mix watch -- --watch-options-poll=1000",
-    "build": "mix --production"
+    "dev": "npx mix watch -- --watch-options-poll=1000",
+    "build": "npx mix --production"
   },
   "repository": {
     "type": "git",
