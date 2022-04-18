@@ -41,7 +41,9 @@ jobs:
           SITE_URL: ${{ steps.project.outputs.site-url }}
           production: true
         # was: npm ci
-        run: npm run build
+        run: |
+          npm install
+          npm run build
 
       - name: Setup composer
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
